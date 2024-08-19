@@ -17,9 +17,7 @@ Re-Match is an Android application designed to bring gamers together. Whether yo
 
 ## Getting Started
 
-![registration_screen](https://github.com/user-attachments/assets/98f8c3ab-8aee-4843-8f30-49b213b779bc)
-
-![login](https://github.com/user-attachments/assets/87f7c95b-3ad6-4387-925f-d17fc0455112)
+![registration_screen](https://github.com/user-attachments/assets/98f8c3ab-8aee-4843-8f30-49b213b779bc)  ![login](https://github.com/user-attachments/assets/87f7c95b-3ad6-4387-925f-d17fc0455112)
 
 
 ## Home
@@ -29,9 +27,7 @@ Re-Match is an Android application designed to bring gamers together. Whether yo
 
 ## Profile
 
-![profile](https://github.com/user-attachments/assets/baa2554c-f744-4d95-ab54-8ade6487283b)
-
-![edit_profile](https://github.com/user-attachments/assets/76580ee6-29b7-4255-b4b0-d7bed1e8e42d)
+![profile](https://github.com/user-attachments/assets/baa2554c-f744-4d95-ab54-8ade6487283b)  ![edit_profile](https://github.com/user-attachments/assets/76580ee6-29b7-4255-b4b0-d7bed1e8e42d)
 
 
 ## Discover
