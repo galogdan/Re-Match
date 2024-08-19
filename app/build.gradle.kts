@@ -121,7 +121,6 @@ dependencies {
 
     implementation (libs.firebase.database.ktx)
 
-    //Lottie
 
 
 

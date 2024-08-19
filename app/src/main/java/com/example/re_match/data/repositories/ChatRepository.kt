@@ -1,6 +1,6 @@
 package com.example.re_match.data.repositories
 
-import android.util.Log
+
 import com.example.re_match.domain.models.Chat
 import com.example.re_match.domain.models.Message
 import com.example.re_match.domain.repositories.IChatRepository
@@ -10,8 +10,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ServerValue
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.snapshots
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -52,7 +50,7 @@ class ChatRepository @Inject constructor(
 
             messageRef.setValue(messageWithId).await()
 
-            // Update the last message and timestamp in the chat
+            // update the last message and timestamp in the chat
             database.getReference("chats")
                 .child(message.chatId)
                 .updateChildren(mapOf(

@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.re_match.domain.models.FriendRequestStatus
 import com.example.re_match.domain.models.GamingPlatform
 import com.example.re_match.domain.models.UserProfile
-import com.example.re_match.domain.repositories.IUserRepository
 import com.example.re_match.domain.usecases.CancelFriendRequestUseCase
 import com.example.re_match.domain.usecases.CheckFriendRequestStatusUseCase
 import com.example.re_match.domain.usecases.DiscoverUsersUseCase
@@ -136,7 +135,6 @@ class DiscoverViewModel @Inject constructor(
                 newStatuses[userId] = if (currentStatus == FriendRequestStatus.PENDING) null else FriendRequestStatus.PENDING
                 _friendRequestStatuses.value = newStatuses
             } else {
-                // handle error
             }
         }
     }

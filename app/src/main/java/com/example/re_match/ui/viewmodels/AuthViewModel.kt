@@ -97,7 +97,6 @@ class AuthViewModel @Inject constructor(
                     }
                 },
                 onFailure = { error ->
-                    Log.e("AuthViewModel", "Failed to check first login status", error) // Add this log
                     _authState.value = AuthState.Error(error.message ?: "Failed to check first login status")
                 }
             )

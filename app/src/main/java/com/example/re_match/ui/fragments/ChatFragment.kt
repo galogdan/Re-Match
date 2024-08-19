@@ -6,8 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
@@ -20,7 +19,6 @@ import com.bumptech.glide.Glide
 import com.example.re_match.R
 import com.example.re_match.databinding.FragmentChatBinding
 import com.example.re_match.databinding.LayoutChatViewBinding
-import com.example.re_match.domain.models.Message
 import com.example.re_match.ui.adapters.ChatListAdapter
 import com.example.re_match.ui.adapters.MessageAdapter
 import com.example.re_match.ui.adapters.SearchResultAdapter
@@ -28,7 +26,6 @@ import com.example.re_match.ui.viewmodels.ChatState
 import com.example.re_match.ui.viewmodels.ChatViewModel
 import com.example.re_match.utils.UserCardUtil
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -167,14 +164,20 @@ class ChatFragment : Fragment() {
 
     private fun showChatPartnerProfile() {
         val profile = viewModel.chatPartnerProfile.value ?: return
-        val dialogView = layoutInflater.inflate(R.layout.item_user_card, null)
+        val dialogView = layoutInflater.inflate(R.layout.dialog_user_card, null)
 
         UserCardUtil.populateUserCard(dialogView, profile, showFriendRequestButton = false)
 
-        AlertDialog.Builder(requireContext())
+        val dialog = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialogStyle)
             .setView(dialogView)
-            .setPositiveButton("Close") { dialog, _ -> dialog.dismiss() }
-            .show()
+            .create()
+
+        dialogView.findViewById<Button>(R.id.btnCloseDialog).setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.show()
     }
 
     private fun showChatList() {
@@ -206,13 +209,12 @@ class ChatFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch {
                     viewModel.chats.collect { chatsWithProfiles ->
-                        Log.d("ChatFragment", "Chats updated: ${chatsWithProfiles.size}")
                         chatListAdapter.submitList(chatsWithProfiles)
                     }
                 }
                 launch {
                     viewModel.searchResults.collect { searchResults ->
-                        Log.d("ChatFragment", "Search results updated: ${searchResults.size}")
+
                         searchResultAdapter.submitList(searchResults)
                         if (searchResults.isEmpty()) {
                             Log.d("ChatFragment", "No search results found")
@@ -222,7 +224,6 @@ class ChatFragment : Fragment() {
                 }
                 launch {
                     viewModel.messages.collect { messages ->
-                        Log.d("ChatFragment", "Messages updated: ${messages.size}")
                         messageAdapter.submitList(messages)
                         chatViewBinding.rvMessages.scrollToPosition(messages.size - 1)
                     }
@@ -232,22 +233,21 @@ class ChatFragment : Fragment() {
 
         viewModel.selectedChat.observe(viewLifecycleOwner) { selectedChat ->
             selectedChat?.let { (chat, profile) ->
-                Log.d("ChatFragment", "Selected chat: ${chat.id}, Profile: ${profile?.nickname}")
                 chatViewBinding.tvChatTitle.text = profile?.nickname ?: "Chat"
                 viewModel.refreshMessages(chat.id)
             }
         }
 
         viewModel.state.observe(viewLifecycleOwner) { state ->
-            Log.d("ChatFragment", "State changed: $state")
+
             when (state) {
                 is ChatState.Loading -> showLoading(true)
                 is ChatState.ChatsRefreshed -> showLoading(false)
                 is ChatState.MessagesRefreshed -> showLoading(false)
                 is ChatState.SearchCompleted -> {
                     showLoading(false)
-                    Log.d("ChatFragment", "Search completed")
-                    // Ensure search results are visible here
+
+
                     showSearchResults()
                 }
                 is ChatState.ChatSelected -> {

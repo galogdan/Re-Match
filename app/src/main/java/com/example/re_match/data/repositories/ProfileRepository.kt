@@ -20,14 +20,11 @@ class ProfileRepository @Inject constructor(
             val document = firestore.collection("users").document(uid).get().await()
             val userProfile = document.toObject(UserProfile::class.java)
             if (userProfile != null) {
-                Log.d("ProfileRepository", "Retrieved profile for $uid: isFirstLogin = ${userProfile.isFirstLogin}")
                 Result.success(userProfile)
             } else {
-                Log.w("ProfileRepository", "User profile not found for $uid")
                 Result.failure(Exception("User profile not found"))
             }
         } catch (e: Exception) {
-            Log.e("ProfileRepository", "Error getting user profile", e)
             Result.failure(e)
         }
     }

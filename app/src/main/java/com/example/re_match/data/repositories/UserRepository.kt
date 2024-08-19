@@ -10,11 +10,9 @@ import com.example.re_match.ui.viewmodels.DiscoverFilters
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.AggregateSource
 import com.google.firebase.firestore.FieldPath
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.coroutines.tasks.await
-import java.util.Date
 import javax.inject.Inject
 
 class UserRepository @Inject constructor(
@@ -251,20 +249,20 @@ class UserRepository @Inject constructor(
         }
     }
 
-    override suspend fun checkFriendRequestStatus(otherUserId: String): Result<FriendRequestStatus?> {
+    override suspend fun checkFriendRequestStatus(receiverId: String): Result<FriendRequestStatus?> {
         return try {
             val currentUserId = auth.currentUser?.uid ?: throw Exception("User not logged in")
 
             // check if users are already friends
-            val areFriends = isFriend(currentUserId, otherUserId)
+            val areFriends = isFriend(currentUserId, receiverId)
             if (areFriends) {
                 return Result.success(FriendRequestStatus.ACCEPTED)
             }
 
             // check for friend request in both directions
             val requestQuery = firestore.collection("friendRequests")
-                .whereIn("senderId", listOf(currentUserId, otherUserId))
-                .whereIn("receiverId", listOf(currentUserId, otherUserId))
+                .whereIn("senderId", listOf(currentUserId, receiverId))
+                .whereIn("receiverId", listOf(currentUserId, receiverId))
                 .limit(1)
                 .get()
                 .await()

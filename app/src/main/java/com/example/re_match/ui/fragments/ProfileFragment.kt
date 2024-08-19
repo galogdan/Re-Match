@@ -144,7 +144,7 @@ class ProfileFragment : Fragment() {
                 tempFile.outputStream().use { output ->
                     stream.copyTo(output)
                 }
-                // Use the temporary file's URI
+
                 val tempUri = FileProvider.getUriForFile(requireContext(), "${requireContext().packageName}.provider", tempFile)
                 viewModel.uploadProfilePhoto(tempUri)
             }

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseAuth
 import com.example.re_match.R
 import com.example.re_match.databinding.FragmentMainBinding
 import com.example.re_match.ui.adapters.ViewPagerAdapter
@@ -77,7 +76,7 @@ class MainFragment : Fragment() {
         }
 
         parentFragmentManager.setFragmentResultListener("PROFILE_UPDATED", viewLifecycleOwner) { _, _ ->
-            // Refresh the profile tab
+            // refresh the profile tab
             (childFragmentManager.fragments.find { it is ProfileFragment } as? ProfileFragment)?.refreshProfile()
         }
     }

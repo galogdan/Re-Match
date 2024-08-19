@@ -23,6 +23,7 @@ object UserCardUtil {
             findViewById<TextView>(R.id.chipGender)?.text = profile.gender.toString().takeIf { profile.privacySettings["showGender"] == true } ?: "Gender hidden"
             findViewById<TextView>(R.id.chipAge)?.text = profile.age?.toString().takeIf { profile.privacySettings["showAge"] == true } ?: "Age hidden"
             findViewById<TextView>(R.id.tvShortDescription)?.text = profile.shortDescription
+            findViewById<TextView>(R.id.tvRegion)?.text = "Region: ${profile.region}"
             findViewById<TextView>(R.id.tvGamingHours)?.text = "Gaming Hours: ${profile.gamingHours}"
             findViewById<TextView>(R.id.tvPreferredGames)?.text = "Preferred Games: ${profile.preferredGames.joinToString(", ")}"
             findViewById<TextView>(R.id.chipPlatform)?.text = "Preferred Platform: ${profile.preferredPlatform}"
