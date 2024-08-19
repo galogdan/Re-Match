@@ -78,7 +78,7 @@ class ChatListAdapter(private val onChatClicked: (Chat) -> Unit) :
         }
 
         override fun areContentsTheSame(oldItem: Pair<Chat, UserProfile?>, newItem: Pair<Chat, UserProfile?>): Boolean {
-            return oldItem == newItem
+            return oldItem == newItem && oldItem.first.lastMessageTimestamp == newItem.first.lastMessageTimestamp
         }
     }
 }

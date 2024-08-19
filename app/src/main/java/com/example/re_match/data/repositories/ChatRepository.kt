@@ -7,6 +7,7 @@ import com.example.re_match.domain.repositories.IChatRepository
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ServerValue
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.snapshots
 import com.google.firebase.firestore.FirebaseFirestore
@@ -51,12 +52,12 @@ class ChatRepository @Inject constructor(
 
             messageRef.setValue(messageWithId).await()
 
-            // Update the last message in the chat
+            // Update the last message and timestamp in the chat
             database.getReference("chats")
                 .child(message.chatId)
                 .updateChildren(mapOf(
                     "lastMessage" to message.content,
-                    "lastMessageTimestamp" to message.timestamp
+                    "lastMessageTimestamp" to ServerValue.TIMESTAMP
                 )).await()
 
             Result.success(Unit)
@@ -77,10 +78,14 @@ class ChatRepository @Inject constructor(
 
     override fun getChats(userId: String): Flow<List<Chat>> = callbackFlow {
         val chatsRef = database.getReference("chats")
-        val listener = chatsRef.orderByChild("participants/$userId").equalTo(true)
+        val listener = chatsRef
+            .orderByChild("lastMessageTimestamp")
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    val chats = snapshot.children.mapNotNull { it.getValue(Chat::class.java) }
+                    val chats = snapshot.children
+                        .mapNotNull { it.getValue(Chat::class.java) }
+                        .filter { it.participants.containsKey(userId) }
+                        .sortedByDescending { it.lastMessageTimestamp }
                     trySend(chats)
                 }
 

@@ -68,7 +68,7 @@ class ChatViewModel @Inject constructor(
             currentUserId?.let { userId ->
                 try {
                     getChatsWithProfilesUseCase(userId).collect { chatsWithProfiles ->
-                        _chats.value = chatsWithProfiles
+                        _chats.value = chatsWithProfiles.sortedByDescending { (chat, _) -> chat.lastMessageTimestamp }
                         _state.value = ChatState.ChatsRefreshed
                     }
                 } catch (error: Exception) {
