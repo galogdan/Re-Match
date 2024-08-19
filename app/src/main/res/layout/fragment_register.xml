@@ -64,6 +64,7 @@
                         android:id="@+id/etEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/deep_blue"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -84,6 +85,7 @@
                         android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:inputType="textPassword"
                         android:textColor="@color/deep_blue"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -104,6 +106,7 @@
                         android:id="@+id/etConfirmPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:inputType="textPassword"
                         android:textColor="@color/deep_blue"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -122,6 +125,7 @@
                         android:id="@+id/etFullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:inputType="textPersonName"
                         android:textColor="@color/deep_blue"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -140,6 +144,7 @@
                         android:id="@+id/etNickname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:inputType="text"
                         android:textColor="@color/deep_blue"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -149,6 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gender"
+
                     android:textColor="@color/deep_blue"
                     android:textSize="16sp"
                     android:layout_marginTop="16dp"/>

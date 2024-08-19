@@ -24,6 +24,7 @@
                 android:background="@drawable/rounded_search_background"
                 android:queryHint="Search by Nickname"
                 app:iconifiedByDefault="false"
+                app:queryHint="Search By Nickname"
                 app:queryBackground="@null"
                 app:searchIcon="@drawable/ic_search_24dp"
                 app:closeIcon="@drawable/ic_clear_24dp"
