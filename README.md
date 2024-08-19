@@ -1,6 +1,6 @@
 # Re-Match: Connect with Your Gaming Community
 
-<img src="app/src/main/ic_launcher-playstore.png" width="100" alt="Re-Match Logo">
+<img src="app/src/main/ic_launcher-playstore.png" width="200" alt="Re-Match Logo">
 
 ## 🎮 About Re-Match
 
