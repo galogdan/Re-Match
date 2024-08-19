@@ -1,6 +1,6 @@
 # Re-Match: Connect with Your Gaming Community
 
-![logo_new.png](app%2Fsrc%2Fmain%2Fres%2Fdrawable%2Flogo_new.png)
+![ic_launcher-playstore.png](app%2Fsrc%2Fmain%2Fic_launcher-playstore.png)
 
 ## 🎮 About Re-Match
 
