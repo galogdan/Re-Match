@@ -1,0 +1,35 @@
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="CustomChipChoice" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_color_unselected</item>
+        <item name="android:textColor">@color/chip_text_color_unselected</item>
+        <item name="chipStrokeColor">@color/deep_blue</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="submitBackground">@android:color/transparent</item>
+        <item name="closeIcon">@drawable/ic_clear_24dp</item>
+        <item name="searchIcon">@drawable/ic_search_24dp</item>
+        <item name="android:textColorHint">@color/deep_blue</item>
+        <item name="android:textColor">@color/deep_blue</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_deep_blue</item>
+    </style>
+</resources>

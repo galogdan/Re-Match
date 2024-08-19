@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Re_Match</string>
+    <string name="friend_requests_button_text">Friend Requests (%d)</string>
+    <string name="app_logo">App Logo</string>
+    <string name="preferred_games">Preferred Games</string>
+    <string name="preferred_games_comma_separated">Preferred Games (comma-separated)</string>
+    <string name="region">Region</string>
+    <string name="preferred_platform">Preferred Platform</string>
+    <string name="gaming_hours">Gaming Hours</string>
+    <string name="welcome_to_re_match">Welcome to Re-Match!</string>
+    <string name="it_s_your_first_time_logging_in">It\'s your first time logging in!\nLet\'s set up your profile to get started.</string>
+    <string name="let_s_go">Let\'s Go!</string>
+    <string name="gaming_region">Gaming Region</string>
+    <string name="filter">Filter</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="short_description">Short Description</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="cancel_changes">Cancel Changes</string>
+    <string name="no_friend_requests_at_the_moment">No friend requests at the moment.</string>
+    <string name="friend_requests_0">Friend Requests (0)</string>
+    <string name="my_friends">My Friends</string>
+    <string name="privacy_setup">Privacy Setup</string>
+    <string name="log_out_button">log out button</string>
+    <string name="home_fragment_user_note">Connect with fellow gamers, discover new friends, and chat about your favorite games!</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+</resources>

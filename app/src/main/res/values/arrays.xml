@@ -1,0 +1,20 @@
+<resources>
+    <string-array name="gaming_regions">
+        <item>All Regions</item>
+        <item>North America</item>
+        <item>Europe</item>
+        <item>Asia</item>
+        <item>Middle East</item>
+        <item>South America</item>
+        <item>Oceania</item>
+        <item>Africa</item>
+    </string-array>
+
+    <string-array name="gaming_hours">
+        <item>Any Time</item>
+        <item>Morning (6 AM - 12 PM)</item>
+        <item>Afternoon (12 PM - 6 PM)</item>
+        <item>Evening (6 PM - 12 AM)</item>
+        <item>Night (12 AM - 6 AM)</item>
+    </string-array>
+</resources>

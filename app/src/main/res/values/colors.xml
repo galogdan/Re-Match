@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="deep_blue">#081F5F</color>
+    <color name="deep_blue_old">#0D266B</color>
+    <color name="light_blue">#60A5FA</color>
+    <color name="light_gray">#F3F4F6</color>
+    <color name="ic_launcher_background_logo">#FFFFFF</color>
+    <color name="highlight_color">#FFFF00</color>
+    <color name="sent_message_bg">#8B77F8</color>
+    <color name="received_message_bg">#396BC1</color>
+    <color name="sent_message_text">#FFFFFF</color>
+    <color name="received_message_text">#FFFFFF</color>
+    <color name="chip_background_color_selected">@color/deep_blue</color>
+    <color name="chip_background_color_unselected">@color/light_blue</color>
+    <color name="chip_text_color_selected">@color/light_blue</color>
+    <color name="chip_text_color_unselected">@color/deep_blue</color>
+</resources>
+
