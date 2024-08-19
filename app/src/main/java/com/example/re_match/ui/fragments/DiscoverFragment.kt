@@ -124,7 +124,7 @@ class DiscoverFragment : Fragment() {
 
         viewModel.errorMessage.observe(viewLifecycleOwner) { errorMessage ->
             Log.e("DiscoverFragment", "Error message received: $errorMessage")
-            Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+            //Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
         }
 
         viewModel.friendRequestStatusState.observe(viewLifecycleOwner) { status ->
@@ -134,11 +134,11 @@ class DiscoverFragment : Fragment() {
                 }
                 is FriendRequestStatusState.Success -> {
                     showLoading(false)
-                    Toast.makeText(context, "Friend request action successful", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(context, "Friend request action successful", Toast.LENGTH_SHORT).show()
                 }
                 is FriendRequestStatusState.Error -> {
                     showLoading(false)
-                    Toast.makeText(context, "Error: ${status.message}", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(context, "Error: ${status.message}", Toast.LENGTH_LONG).show()
                 }
             }
         }

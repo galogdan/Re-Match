@@ -107,7 +107,7 @@ class MyFriendsFragment : Fragment() {
     }
 
     private fun showMessage(message: String) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun showLoading(isLoading: Boolean) {
@@ -119,7 +119,7 @@ class MyFriendsFragment : Fragment() {
     }
 
     private fun showError(message: String) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
 

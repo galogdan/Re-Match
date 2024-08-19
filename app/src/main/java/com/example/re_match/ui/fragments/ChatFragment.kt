@@ -74,7 +74,6 @@ class ChatFragment : Fragment() {
     private fun setupSearchView() {
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Log.d("ChatFragment", "onQueryTextSubmit: $query")
                 query?.let {
                     viewModel.startSearch()
                     viewModel.searchFriends(it)
@@ -272,7 +271,7 @@ class ChatFragment : Fragment() {
     }
 
     private fun showError(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {

@@ -51,11 +51,11 @@ class FriendRequestsFragment : Fragment() {
         viewModel.responseStatus.observe(viewLifecycleOwner) { status ->
             when (status) {
                 is FriendRequestViewModel.ResponseStatus.Success -> {
-                    Toast.makeText(context, "Request processed successfully", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(context, "Request processed successfully", Toast.LENGTH_SHORT).show()
                     viewModel.getFriendRequests() // Refresh the list
                 }
                 is FriendRequestViewModel.ResponseStatus.Error -> {
-                    Toast.makeText(context, "Error: ${status.message}", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(context, "Error: ${status.message}", Toast.LENGTH_LONG).show()
                 }
             }
         }

@@ -55,8 +55,8 @@
                     android:id="@+id/tilEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:hintEnabled="false"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Email"
                     app:boxStrokeColor="@color/deep_blue"
                     app:hintTextColor="@color/deep_blue">
 
@@ -64,6 +64,7 @@
                         android:id="@+id/etEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Email"
                         android:background="@color/white"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/deep_blue"/>
@@ -75,16 +76,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Password"
                     app:boxStrokeColor="@color/deep_blue"
                     app:hintTextColor="@color/deep_blue"
                     app:passwordToggleEnabled="true"
+                    app:hintEnabled="false"
                     app:passwordToggleTint="@color/deep_blue">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Password"
                         android:background="@color/white"
                         android:inputType="textPassword"
                         android:textColor="@color/deep_blue"/>
@@ -95,8 +97,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    app:hintEnabled="false"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Confirm Password"
                     app:boxStrokeColor="@color/deep_blue"
                     app:hintTextColor="@color/deep_blue"
                     app:passwordToggleEnabled="true"
@@ -106,6 +108,7 @@
                         android:id="@+id/etConfirmPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Confirm Password"
                         android:background="@color/white"
                         android:inputType="textPassword"
                         android:textColor="@color/deep_blue"/>
@@ -115,9 +118,9 @@
                     android:id="@+id/tilFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:hintEnabled="false"
                     android:layout_marginTop="16dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Full Name"
                     app:boxStrokeColor="@color/deep_blue"
                     app:hintTextColor="@color/deep_blue">
 
@@ -125,6 +128,7 @@
                         android:id="@+id/etFullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Full Name"
                         android:background="@color/white"
                         android:inputType="textPersonName"
                         android:textColor="@color/deep_blue"/>
@@ -135,8 +139,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    app:hintEnabled="false"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Nickname"
                     app:boxStrokeColor="@color/deep_blue"
                     app:hintTextColor="@color/deep_blue">
 
@@ -144,6 +148,7 @@
                         android:id="@+id/etNickname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Nickname"
                         android:background="@color/white"
                         android:inputType="text"
                         android:textColor="@color/deep_blue"/>

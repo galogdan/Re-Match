@@ -132,13 +132,13 @@ class HomeFragment : Fragment() {
                 }
                 is PrivacySettingsState.Error -> {
                     showLoading(false)
-                    Toast.makeText(context, "Error: ${state.message}", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(context, "Error: ${state.message}", Toast.LENGTH_SHORT).show()
                     isDialogShowing = false
                     privacyDialog?.dismiss()
                 }
                 is PrivacySettingsState.UpdateSuccess -> {
                     showLoading(false)
-                    Toast.makeText(context, "Privacy settings updated successfully", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(context, "Privacy settings updated successfully", Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -210,11 +210,11 @@ class EditProfileFragment : Fragment() {
     }
 
     private fun showMessage(message: String) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun showError(message: String) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 
     override fun onDestroyView() {
