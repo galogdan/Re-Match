@@ -39,16 +39,6 @@ Re-Match is an Android application designed to bring gamers together. Whether yo
 
 ![chats](https://github.com/user-attachments/assets/ad4d693e-0866-49ac-a3cb-641989bed09e)
 
-
-
-
-### Prerequisites
-
-- Kotlin 1.5.0 or later
-- Minimum SDK: API 26 
-- Target SDK: API 31 
-
-
 ## 🛠️ Built With
 
 - [Kotlin](https://kotlinlang.org/) - Primary programming language
