@@ -1,6 +1,6 @@
 # Re-Match: Connect with Your Gaming Community
 
-![ic_launcher-playstore.png](app%2Fsrc%2Fmain%2Fic_launcher-playstore.png)
+<img src="app/src/main/ic_launcher-playstore.png" width="200" alt="Re-Match Logo">
 
 ## 🎮 About Re-Match
 
@@ -15,16 +15,29 @@ Re-Match is an Android application designed to bring gamers together. Whether yo
 - **💬 Real-time Chat**: Connect instantly with your new gaming buddies through our sleek chat interface.
 - **🛡️ Privacy Controls**: You're in control - choose what information you want to share.
 
-## 🚀 Getting Started
+## Getting Started
 
-![img.png](img.png) ![img_2.png](img_2.png)
+![registration_screen](https://github.com/user-attachments/assets/98f8c3ab-8aee-4843-8f30-49b213b779bc)  ![login](https://github.com/user-attachments/assets/87f7c95b-3ad6-4387-925f-d17fc0455112)
 
-### Prerequisites
 
-- Kotlin 1.5.0 or later
-- Minimum SDK: API 26 
-- Target SDK: API 31 
+## Home
 
+![home](https://github.com/user-attachments/assets/6f2ddf55-9654-492c-bf4f-ab2da2c811b3)
+
+
+## Profile
+
+![profile](https://github.com/user-attachments/assets/baa2554c-f744-4d95-ab54-8ade6487283b)  ![edit_profile](https://github.com/user-attachments/assets/76580ee6-29b7-4255-b4b0-d7bed1e8e42d)
+
+
+## Discover
+
+![Discover](https://github.com/user-attachments/assets/93b52bb9-1388-4046-9f63-05b45a6e78ed)
+
+
+## Chat
+
+![chats](https://github.com/user-attachments/assets/ad4d693e-0866-49ac-a3cb-641989bed09e)
 
 ## 🛠️ Built With
 
