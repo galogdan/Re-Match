@@ -60,6 +60,7 @@ We welcome contributions to Re-Match! Please feel free to submit pull requests, 
 ## 📞 Contact
 
 Gal Ogdan 
+
 https://github.com/galogdan/Re-Match
 
 ## 🙏 Acknowledgements
